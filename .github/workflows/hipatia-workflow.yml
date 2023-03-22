@@ -29,7 +29,17 @@ jobs:
         with:
           NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
           NOTION_DATABASE: https://www.notion.so/deleuterio/7150d518c0ed4a3082e4eb59fa0ac478
-      
+          FILTER_PROP: Status
+          FILTER_VALUES: Published, Not started, In progress
+          CONVERT_PROP_CASE: snake
+          ARTICLE_PATH: content/posts/{title}/README.md
+          ASSETS_PATH: ./
+          PARALLEL_PAGES: 25
+          PARALLEL_DOWNLOADS_PER_PAGE: 3
+          DOWNLOAD_IMAGE_TIMEOUT: 30
+          SKIP_DOWNLOADED_IMAGES: true
+          DOWNLOAD_FRONTMATTER_IMAGES: true
+          
       - name: Save changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
