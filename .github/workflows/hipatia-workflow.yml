@@ -30,7 +30,7 @@ jobs:
           NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
           NOTION_DATABASE: https://www.notion.so/deleuterio/7150d518c0ed4a3082e4eb59fa0ac478
           FILTER_PROP: Status
-          FILTER_VALUES: Published
+          FILTER_VALUES: Not started, In progress, Published
           CONVERT_PROP_CASE: snake
           ARTICLE_PATH: content/posts/{title}/README.md
           ASSETS_PATH: ./
